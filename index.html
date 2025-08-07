@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="/Elements/rock-paper-scissors/style.css">
+</head>
+<body>
+    <!-- pop-up to confirm user to play -->
+    <div id="startPopUp">
+        <div class="box1">
+            <h2>background music? </h2>
+            <button id="playNowBtn">Unmute 🔊</button>
+            <button id="closeBtn">Mute 🔇</button>
+        </div>
+    </div>
+
+    <!-- sound effects -->
+    <div>
+        <audio id="bgMusic" loop>
+        <source src="/Elements/rock-paper-scissors/ending.mp3.mp3" type="audio/mpeg" />
+        </audio>
+        <audio id="closeMusic">
+            <source src="/Elements/rock-paper-scissors/pop.mp3.mp3" type="audio/mpeg" />
+        </audio>
+        <audio id="winSound" src="/Elements/rock-paper-scissors/victory.mp3.mp3"></audio>
+        <audio id="loseSound" src="/Elements/rock-paper-scissors/lose.mp3.mp3"></audio>
+    </div>
+
+    <!-- Game Content -->
+     <div class="game-container">
+        <h1>ROCK PAPER SCISSORS</h1>
+        <div class="scoreboard">
+            <p>You: <span id="player-score">0</span></p>
+            <p>Bot: <span id="bot-score">0</span></p>
+        </div>
+
+        <div class="choices">
+            <button class="choice" onclick="playGame('rock')">✊ Rock</button>
+            <button class="choice" onclick="playGame('scissors')">✌️ Scissors</button>
+            <button class="choice" onclick="playGame('paper')">✋ Paper</button>
+            
+        </div>
+    <!-- Result Modal-->
+        <div id="resultModal" class="modal">
+            <div class="modal-content">
+                <h2 id="resultText">You Win!</h2>
+                <button id="closeResultBtn">Close</button>
+            </div>
+        </div>
+        <div id="result-text"></div>
+    </div>
+
+
+
+
+    </body>
+<script src="/Elements/rock-paper-scissors/script.js"></script>
+</html>
